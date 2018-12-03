@@ -1,0 +1,14 @@
+{
+  "name": "icy-streamer",
+  "version": "1.0.1",
+  "description": "A dynamic icecast steam client manager.Stream client is ezstream.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nycrera",
+  "license": "ISC",
+  "dependencies": {
+    "xml2js": "^0.4.19"
+  }
+}
