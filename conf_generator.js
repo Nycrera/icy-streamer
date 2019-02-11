@@ -2,7 +2,7 @@ var generator = {};
 generator.create = function (filename, conf, callback) {
     var fs = require('fs');
     if (!filename || !conf) throw "filename or conf is not specified for the configuration generator.";
-    if (!conf.playlist) throw "Playlist conf is mandatory.";
+    if (!conf.filename) throw "Playlist conf is mandatory.";
     var xml2js = require('xml2js');
     var builder = new xml2js.Builder();
     var xmlConfig = {
