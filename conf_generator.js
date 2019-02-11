@@ -44,4 +44,4 @@ generator.read = function (file, callback) {
     });
 };
 
-modules.exports = generator;
+module.exports = generator;
