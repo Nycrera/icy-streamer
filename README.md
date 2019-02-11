@@ -1,10 +1,10 @@
 # icy-streamer
 
-icy-streamer is a nodejs controller for the famous icecast sorce client known as ezstream.
+icy-streamer is a nodejs controller for the famous icecast source client known as ezstream.
 Using icy-streamer you can add new songs to your currently playing stream. So you can dynamically change your next music to play.
 
 Just wrap this around a express REST API and you have a REST API controlled icecast live stream.
-The reason this module created was to be able to create a live internet radio controlled by the LISTENERS !
+The reason this module created was to be able to create a live internet radio controlled by the LISTENERS!
 
 #### Requirements
   - [Icecast Server](http://icecast.org/)
@@ -45,7 +45,7 @@ $ npm install icy-streamer
  - Examples and Notes
  - Tests
  - Detailed Documentation
- - Some features that i forgot right now but probably will remember soon. (Didn't happened)
+ - Some features that i forgot right now but probably will remember soon.
 
 License
 ----
