@@ -19,11 +19,11 @@ var streamer = function (configuration, callback) {
          fs.appendFile(configuration.filename, '#EXTM3U\n', function (err) {
             if (err) throw err;
             console.log('[INFO]New playlist file: ' + configuration.filename + ' generated in local directory.');
+            if (typeof (callback) === 'function')
+               generator.create('ezstream-conf.xml', configuration, callback); // Hard coded for now
+            else generator.create('ezstream-conf.xml', configuration);
          });
       }
-      if (typeof (callback) === 'function')
-         generator.create('ezstream-conf.xml', configuration, callback); // Hard coded for now
-      else generator.create('ezstream-conf.xml', configuration);
    } else {
       throw "icy-streamer constructor only takes either an object or a string! But yours is " + typeof (configuration);
    }
