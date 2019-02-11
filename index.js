@@ -31,12 +31,13 @@ var streamer = function (configuration, callback) {
    var self = this;
 
    this.addSong = function (filename, callback) {
-      if (!self.running) throw "Can't add new song \"" + filename + "\" while stream is not running.";
+
       if (!fs.existsSync(filename)) throw "No file exists with this path : " + filename;
-      fs.appendFile(self.filename, filename + "\n", function (err) {
+      fs.appendFile(self.configuration.filename, filename + "\n", function (err) {
          if (err) throw err;
          console.log('[INFO]New song: ' + filename + ' added to playlist.');
-         self.flushPlayList();
+         if (self.running)
+            self.flushPlayList();
          if (typeof (callback) === 'function') callback();
       });
    };
