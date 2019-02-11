@@ -1,6 +1,6 @@
 {
   "name": "icy-streamer",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "A dynamic icecast steam client manager.Stream client is ezstream.",
   "main": "index.js",
   "scripts": {

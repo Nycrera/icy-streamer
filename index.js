@@ -62,6 +62,6 @@ var streamer = function (configuration, callback) {
          throw error;
       }
    };
-
+   return this;
 };
 module.exports = streamer;
