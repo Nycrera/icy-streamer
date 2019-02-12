@@ -16,9 +16,9 @@ var streamer = function (configuration, callback) {
       if (!configuration.filename) {
          console.log('[WARN]No playlist specified so creating a new one.'); // If no playlist is specified let us create ourselves
          configuration.filename = __dirname + '/playlist.m3u';
-         fs.appendFile(configuration.filename, '#EXTM3U\n', function (err) {
+         fs.writeFile(configuration.filename, '#EXTM3U\n', function (err) {
             if (err) throw err;
-            console.log('[INFO]New playlist file: ' + configuration.filename + ' generated in local directory.');
+            console.log('[INFO]New playlist file: ' + configuration.filename + ' is generated.');
             if (typeof (callback) === 'function')
                generator.create('ezstream-conf.xml', configuration, callback); // Hard coded for now
             else generator.create('ezstream-conf.xml', configuration);
@@ -56,6 +56,7 @@ var streamer = function (configuration, callback) {
       try {
          self.Stream = spawn('ezstream', ['-c', self.configuration.filename]);
          self.Stream.on("exit", function () {
+            console.log("[INFO] Ezstream is dead now.");
             self.Stream.running = false;
          });
          self.Stream.running = true;
