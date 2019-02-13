@@ -32,6 +32,8 @@ liveStream.addSong("/home/songs/coolsong.mp3",function(){
 });
 
 ```
+Also there is an example as example.js
+
 
 ### Installation
 
