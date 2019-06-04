@@ -57,9 +57,9 @@ var streamer = function (configuration, callback) {
          self.Stream = spawn('ezstream', ['-c', 'ezstream-conf.xml']);
          self.Stream.on("exit", function () {
             console.log("[INFO] Ezstream is dead now.");
-            self.Stream.running = false;
+            self.running = false;
          });
-         self.Stream.running = true;
+         self.running = true;
       } catch (error) {
          throw error;
       }
